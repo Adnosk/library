@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -8,7 +10,11 @@ function Book(title, author, pages, read) {
   };
 }
 
-const theHobbit = new Book(
+function addBookToLibrary() {
+  // do stuff here
+}
+
+const theHobbit = new Book( // just some sample data
   'The Hobbit',
   'J.R.R. Tolkien',
   '295 pages',
