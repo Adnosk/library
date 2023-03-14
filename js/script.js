@@ -32,6 +32,7 @@ function displayLib() {
   // Create table rows for each book
   myLibrary.forEach((book) => {
     const bookRow = document.createElement('tr');
+
     const titleCell = document.createElement('td');
     titleCell.textContent = book.title;
     bookRow.appendChild(titleCell);
@@ -41,11 +42,11 @@ function displayLib() {
     bookRow.appendChild(authorCell);
 
     const pagesCell = document.createElement('td');
-    pagesCell.textContent = book.author;
+    pagesCell.textContent = book.pages;
     bookRow.appendChild(pagesCell);
 
     const readCell = document.createElement('td');
-    readCell.textContent = book.author;
+    readCell.textContent = book.read;
     bookRow.appendChild(readCell);
 
     libraryTable.appendChild(bookRow);
