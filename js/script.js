@@ -14,6 +14,7 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayLib() {
   const libraryTable = document.querySelector('#library-table');
+  libraryTable.innerHTML = ''; // Clear the table before adding books
 
   // Create table header
   const tableHeader = document.createElement('tr');
