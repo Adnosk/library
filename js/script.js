@@ -1,7 +1,11 @@
 const myLibrary = [];
 
-const newdBtn = document.querySelector('#newBtn');
-newBtn.addEventListener('click', addBookToLibrary);
+const newBtn = document.querySelector('#newBtn');
+const newBookForm = document.querySelector('#newBookForm');
+
+newBtn.addEventListener('click', () => {
+  newBookForm.style.display = 'block';
+});
 
 function Book(title, author, pages, read) {
   this.title = title;
