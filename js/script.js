@@ -2,10 +2,20 @@ const myLibrary = [];
 
 const newBtn = document.querySelector('#newBtn');
 const newBookForm = document.querySelector('#newBookForm');
-const addBtn = document.querySelector('addBtn');
 
 newBtn.addEventListener('click', () => {
   newBookForm.style.display = 'block';
+});
+
+newBookForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const title = document.querySelector('#titleInput').value;
+  const author = document.querySelector('#authorInput').value;
+  const pages = document.querySelector('#pagesInput').value;
+  const read = document.querySelector('#readInput').value;
+
+  addBookToLibrary(title, author, pages, read);
+  newBookForm.style.display = 'none';
 });
 
 function Book(title, author, pages, read) {
@@ -18,6 +28,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
   const newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
+  displayLib();
 }
 
 function displayLib() {
@@ -61,5 +72,3 @@ function displayLib() {
 addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 310, 'Not read yet');
 addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 281, 'Read');
 addBookToLibrary('1984', 'George Orwell', 328, 'Read');
-
-displayLib();
