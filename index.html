@@ -12,6 +12,23 @@
   <body>
     <h1>Library of books</h1>
     <button id="newBtn">NEW BOOK</button>
+    <div class="popForm">
+      <form id="newBookForm" style="display: none">
+        <label for="titleInpunt">Title:</label>
+        <input type="text" id="titleInpunt" required />
+
+        <label for="authorInput">Author:</label>
+        <input type="text" id="authorInput" required />
+
+        <label for="pagesInput">Number of Pages:</label>
+        <input type="number" id="pagesInput" required />
+
+        <label for="readInput">Read:</label>
+        <input type="checkbox" id="readInput" />
+
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
     <div class="table-content">
       <table id="library-table"></table>
     </div>
