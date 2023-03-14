@@ -13,7 +13,7 @@ Book.prototype.info = function () {
 
 function addBookToLibrary(title, author, pages, read) {
   const newBook = new Book(title, author, pages, read);
-  myLibrary.push;
+  myLibrary.push(newBook);
 }
 
 function displayLib() {
