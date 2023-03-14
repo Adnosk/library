@@ -16,6 +16,10 @@ function addBookToLibrary(title, author, pages, read) {
   myLibrary.push;
 }
 
+function displayLib {
+  
+}
+
 const theHobbit = new Book( // just some sample data
   'The Hobbit',
   'J.R.R. Tolkien',
