@@ -18,7 +18,6 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayLib() {
   const libraryTable = document.querySelector('#library-table');
-  libraryTable.innerHTML = ''; // Clear the table before adding books
 
   // Create table header
   const tableHeader = document.createElement('tr');
@@ -53,11 +52,8 @@ function displayLib() {
   });
 }
 
-const theHobbit = new Book( // just some sample data
-  'The Hobbit',
-  'J.R.R. Tolkien',
-  '295 pages',
-  'not read yet'
-);
+addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 310, 'Not read yet');
+addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 281, 'Read');
+addBookToLibrary('1984', 'George Orwell', 328, 'Read');
 
-console.log(theHobbit.info());
+displayLib();
