@@ -2,6 +2,7 @@ const myLibrary = [];
 
 const newBtn = document.querySelector('#newBtn');
 const newBookForm = document.querySelector('#newBookForm');
+const addBtn = document.querySelector('addBtn');
 
 newBtn.addEventListener('click', () => {
   newBookForm.style.display = 'block';
