@@ -81,7 +81,7 @@ function displayLib() {
       changeReadStatus(index);
     });
     changeCell.appendChild(changeBtn);
-    bookRow.appendChild(bookRow);
+    bookRow.appendChild(changeCell);
 
     const removeCell = document.createElement('td');
     const removeBtn = document.createElement('button');
