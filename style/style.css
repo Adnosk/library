@@ -43,6 +43,10 @@ input {
   padding: 10px;
 }
 
+#library-table tr:nth-child(even) {
+  background-color: #84ffff;
+}
+
 button {
   background-color: #1abc9c;
   border: none;
