@@ -34,6 +34,11 @@ function addBookToLibrary(title, author, pages, read) {
   displayLib();
 }
 
+function removeBookFromLibrary(index) {
+  myLibrary.splice(index, 1);
+  displayLib();
+}
+
 function displayLib() {
   const libraryTable = document.querySelector('#library-table');
   libraryTable.innerHTML = ''; // Clear the table before adding books
@@ -80,11 +85,6 @@ function displayLib() {
 
     libraryTable.appendChild(bookRow);
   });
-}
-
-function removeBookFromLibrary(index) {
-  myLibrary.splice(index, 1);
-  displayLib;
 }
 
 addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 310, 'Not read yet');
