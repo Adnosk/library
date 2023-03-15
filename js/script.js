@@ -54,7 +54,7 @@ function displayLib() {
   libraryTable.appendChild(tableHeader);
 
   // Create table rows for each book
-  myLibrary.forEach((book) => {
+  myLibrary.forEach((book, index) => {
     const bookRow = document.createElement('tr');
 
     const titleCell = document.createElement('td');
