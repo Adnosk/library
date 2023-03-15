@@ -73,6 +73,16 @@ function displayLib() {
     readCell.textContent = book.read;
     bookRow.appendChild(readCell);
 
+    const changeCell = document.createElement('td');
+    const changeBtn = document.createElement('button');
+    changeBtn.textContent = 'Change read status';
+    changeBtn.setAttribute('data-index', index);
+    changeBtn.addEventListener('click', () => {
+      changeReadStatus(index);
+    });
+    changeCell.appendChild(changeBtn);
+    bookRow.appendChild(bookRow);
+
     const removeCell = document.createElement('td');
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove';
