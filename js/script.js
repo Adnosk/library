@@ -68,8 +68,23 @@ function displayLib() {
     readCell.textContent = book.read;
     bookRow.appendChild(readCell);
 
+    const removeCell = document.createElement('td');
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.setAttribute('data-index', index);
+    removeBtn.addEventListener('click', () => {
+      removeBookFromLibrary(index);
+    });
+    removeCell.appendChild(removeBtn);
+    bookRow.appendChild(removeCell);
+
     libraryTable.appendChild(bookRow);
   });
+}
+
+function removeBookFromLibrary(index) {
+  myLibrary.splice(index, 1);
+  displayLib;
 }
 
 addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 310, 'Not read yet');
