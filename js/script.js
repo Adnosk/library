@@ -46,7 +46,7 @@ function removeBookFromLibrary(index) {
 }
 
 function changeReadStatus(index) {
-  myLibrary[index].flipRead;
+  myLibrary[index].flipRead();
   displayLib();
 }
 
