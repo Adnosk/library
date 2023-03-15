@@ -1,7 +1,14 @@
 body {
   background: #bdffa6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 h1 {
   text-align: center;
+}
+
+#newBookForm {
+  display: flex;
+  flex-direction: column;
 }
