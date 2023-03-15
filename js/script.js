@@ -1,7 +1,7 @@
 const myLibrary = [];
 
 const newBtn = document.querySelector('#newBtn');
-const newBookForm = document.querySelector('#newBookForm');
+const newBookForm = document.querySelector('.popForm');
 
 newBtn.addEventListener('click', () => {
   newBookForm.style.display = 'block';
