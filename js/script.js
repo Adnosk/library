@@ -45,7 +45,7 @@ function displayLib() {
 
   // Create table header
   const tableHeader = document.createElement('tr');
-  const headerTitles = ['Title', 'Author', 'Pages', 'Read'];
+  const headerTitles = ['Title', 'Author', 'Pages', 'Read', ''];
   headerTitles.forEach((attrib) => {
     const th = document.createElement('th');
     th.textContent = attrib;
