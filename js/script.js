@@ -28,6 +28,12 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
+Book.prototype.flipRead = function () {
+  if (this.read === 'Read') {
+    this.read = 'Not read yet';
+  } else this.read = 'Read';
+};
+
 function addBookToLibrary(title, author, pages, read) {
   const newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
@@ -36,6 +42,11 @@ function addBookToLibrary(title, author, pages, read) {
 
 function removeBookFromLibrary(index) {
   myLibrary.splice(index, 1);
+  displayLib();
+}
+
+function changeReadStatus(index) {
+  myLibrary[index].flipRead;
   displayLib();
 }
 
